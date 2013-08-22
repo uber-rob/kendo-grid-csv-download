@@ -21,7 +21,7 @@ Suggested usage is with [Downloadify](https://github.com/dcneiner/Downloadify):
 		Downloadify.create('downloadButton', {
 			filename: "filename.csv",
 			data: function () {
-				return "\uFEFF" + toCSV('supplier_grid');
+				return "\uFEFF" + toCSV('gridId');
 			},
 			onComplete: function () { },
 			onCancel: function () { },
@@ -40,3 +40,7 @@ Suggested usage is with [Downloadify](https://github.com/dcneiner/Downloadify):
 Alternative usage that may work:
 
 	window.open("data:text/csv;charset=utf-8," + escape(toCsv("gridElementId")));
+	
+## Credit
+
+Based on work found originally on the [Kendo UI forums](http://www.kendoui.com/forums/framework/data-source/export-to-csv.aspx)

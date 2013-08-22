@@ -14,9 +14,10 @@ var toCSV = function (gridId) {
 
     //add the header row
     for (var i = 0; i < grid.columns.length; i++) {
-        var title = grid.columns[i].title;
-        if (typeof (title) === "undefined") { title = grid.columns[i].field; }
-        if (typeof (title) === "undefined") { continue; }
+        var title = grid.columns[i].title,
+            field = grid.columns[i].field;
+        if (typeof (field) === "undefined") { continue; // no data! }
+        if (typeof (title) === "undefined") { title = field }
 
         title = title.replace(/"/g, '""');
         csv += '"' + title + '"';
