@@ -11,8 +11,8 @@ Download the sorted, filtered contents of a Kendo UI grid control when using cli
 
 Suggested usage is with [Downloadify](https://github.com/dcneiner/Downloadify):
 
-	<script src="swfobject.js")"></script>
-	<script src="downloadify.min.js")"></script>
+	<script src="swfobject.js"></script>
+	<script src="downloadify.min.js"></script>
 	
 	<div id="gridId">Your Kendo Grid</div>
 	<div id="downloadButton">Your download button</div>
