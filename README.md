@@ -9,7 +9,25 @@ Download the sorted, filtered contents of a Kendo UI grid control when using cli
 
 ## Usage:
 
+### Create a CSV
+
+    toCSV(<document_id_of_kendo_grid>, [array of field names to export without template]);
+	
+This include file contains a function for producing a CSV file from the contents of the Kendo Grid. By default
+any templates for those cells are used to format the data but if you want to skip some formatting you can list
+the fields to export as raw.
+
+Examples:
+
+    var csv1 = toCSV('kendo_grid');
+	var csv2 = toCSV('kendo_grid', ['user_id', 'linked_data']);
+
+### Allow user to download it
+
 Suggested usage is with [Downloadify](https://github.com/dcneiner/Downloadify):
+
+Please note the byte order mark `\uFEFF` - without it Excel won't read the file as UTF-8. If your page is using a different
+character encoding you may need to alter this.
 
 	<script src="swfobject.js"></script>
 	<script src="downloadify.min.js"></script>
@@ -44,3 +62,8 @@ Alternative usage that may work:
 ## Credit
 
 Based on work found originally on the [Kendo UI forums](http://www.kendoui.com/forums/framework/data-source/export-to-csv.aspx)
+
+## Future work
+
+- Perhaps the suppressed templates could be marked in the KendoUI column definition? Might be a good / bad idea?
+- Alternative templates in the KendoUI column definitions?
