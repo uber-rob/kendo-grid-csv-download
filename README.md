@@ -57,7 +57,7 @@ character encoding you may need to alter this.
 
 Alternative usage that may work:
 
-	window.open("data:text/csv;charset=utf-8," + escape(toCsv("gridElementId")));
+	window.open("data:text/csv;charset=utf-8," + escape(toCSV("gridElementId")));
 	
 ## Credit
 
